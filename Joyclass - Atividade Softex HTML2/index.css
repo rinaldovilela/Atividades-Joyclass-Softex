@@ -77,9 +77,9 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Empilhar o título acima das fotos */
+    flex-direction: column; 
     text-align: center;
-    height: 400px; /* Defina uma altura fixa para a seção (ajuste conforme necessário) */
+    height: 400px; 
 }
 
 #fotos h2 {
@@ -89,9 +89,9 @@ header nav ul li a:hover {
 
 .fotos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Ajuste auto-fit */
-    gap: 10px; /* Espaçamento entre as imagens */
-    justify-content: center; /* Centralize horizontalmente */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    justify-content: center; 
 }
 
 .fotos img {
