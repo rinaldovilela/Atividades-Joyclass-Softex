@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007acc;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Empilhar o título acima das fotos */
+    text-align: center;
+    height: 400px; /* Defina uma altura fixa para a seção (ajuste conforme necessário) */
+}
+
+#fotos h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ajuste auto-fit */
+    gap: 10px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centralize horizontalmente */
+}
+
+.fotos img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
