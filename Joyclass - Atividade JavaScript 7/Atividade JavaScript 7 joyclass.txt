@@ -1,0 +1,176 @@
+Objetos Materiais : 
+
+Objeto Material: Livro
+Atributos:
+
+titulo: Título do livro.
+autor: Nome do autor do livro.
+paginas: Número total de páginas do livro.
+Métodos:
+
+lerPagina(numero): Simula a ação de ler a página específica do livro.
+mostrarDetalhes(): Mostra os detalhes do livro (título, autor, número de páginas).
+fecharLivro(): Simula a ação de fechar o livro.
+
+Exemplificando características e ações em JavaScript : 
+
+class Livro {
+    constructor(titulo, autor, paginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+        this.paginaAtual = 1;
+    }
+
+    lerPagina(numero) {
+        this.paginaAtual = numero;
+        console.log(`Você está lendo a página ${numero} do livro.`);
+    }
+
+    mostrarDetalhes() {
+        console.log(`Livro: ${this.titulo} - Autor: ${this.autor} - Páginas: ${this.paginas}`);
+    }
+
+    fecharLivro() {
+        console.log("Livro fechado.");
+    }
+}
+
+
+const meuLivro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1000);
+meuLivro.mostrarDetalhes();
+meuLivro.lerPagina(50);
+meuLivro.fecharLivro();
+
+
+Objeto Material: Cadeira
+Atributos:
+
+cor: Cor da cadeira.
+material: Material de fabricação da cadeira.
+numeroPernas: Número de pernas da cadeira.
+Métodos:
+
+sentar(): Simula a ação de sentar-se na cadeira.
+verificarEstabilidade(): Verifica se a cadeira está estável.
+pintar(novaCor): Simula a ação de pintar a cadeira com uma nova cor.
+
+Exemplificando características e ações em JavaScript : 
+
+class Cadeira {
+    constructor(cor, material, numeroPernas) {
+        this.cor = cor;
+        this.material = material;
+        this.numeroPernas = numeroPernas;
+    }
+
+    sentar() {
+        console.log("Sentando na cadeira.");
+    }
+
+    verificarEstabilidade() {
+        console.log("Verificando estabilidade da cadeira.");
+    }
+
+    pintar(novaCor) {
+        this.cor = novaCor;
+        console.log(`A cadeira foi pintada de ${novaCor}.`);
+    }
+}
+
+const minhaCadeira = new Cadeira("Branca", "Madeira", 4);
+minhaCadeira.sentar();
+minhaCadeira.verificarEstabilidade();
+minhaCadeira.pintar("Azul");
+
+
+OBJETOS ABSTRATOS : 
+
+Objeto Abstrato: Conta Bancária
+Atributos:
+
+numeroConta: Número da conta bancária.
+saldo: Saldo atual da conta.
+titular: Nome do titular da conta.
+Métodos:
+
+consultarSaldo(): Retorna o saldo atual da conta.
+depositar(valor): Realiza um depósito na conta.
+sacar(valor): Realiza um saque na conta.
+
+Exemplificando características e ações em JavaScript : 
+
+class ContaBancaria {
+    constructor(numeroConta, saldo, titular) {
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+        this.titular = titular;
+    }
+
+    consultarSaldo() {
+        return this.saldo;
+    }
+
+    depositar(valor) {
+        this.saldo += valor;
+        console.log(`Depósito de ${valor} realizado. Novo saldo: ${this.saldo}`);
+    }
+
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            console.log(`Saque de ${valor} realizado. Novo saldo: ${this.saldo}`);
+        } else {
+            console.log("Saldo insuficiente.");
+        }
+    }
+}
+
+
+const minhaConta = new ContaBancaria("123456", 1000, "Fulano");
+console.log("Saldo atual:", minhaConta.consultarSaldo());
+minhaConta.depositar(500);
+minhaConta.sacar(200);
+
+
+Objeto Abstrato: Usuário
+Atributos:
+
+nome: Nome do usuário.
+email: Endereço de email do usuário.
+idade: Idade do usuário.
+Métodos:
+
+atualizarEmail(novoEmail): Atualiza o endereço de email do usuário.
+verificarIdadeMinima(idadeMinima): Verifica se a idade do usuário é maior que uma idade mínima específica.
+apresentarUsuario(): Apresenta informações básicas do usuário (nome, email, idade).
+
+
+Exemplificando características e ações em JavaScript : 
+
+class Usuario {
+    constructor(nome, email, idade) {
+        this.nome = nome;
+        this.email = email;
+        this.idade = idade;
+    }
+
+    atualizarEmail(novoEmail) {
+        this.email = novoEmail;
+        console.log(`Email atualizado para: ${novoEmail}`);
+    }
+
+    verificarIdadeMinima(idadeMinima) {
+        return this.idade > idadeMinima;
+    }
+
+    apresentarUsuario() {
+        console.log(`Nome: ${this.nome} - Email: ${this.email} - Idade: ${this.idade}`);
+    }
+}
+
+const novoUsuario = new Usuario("João", "joao@example.com", 25);
+novoUsuario.apresentarUsuario();
+novoUsuario.atualizarEmail("joao.novo@example.com");
+console.log("Idade maior que 18:", novoUsuario.verificarIdadeMinima(18));
+
