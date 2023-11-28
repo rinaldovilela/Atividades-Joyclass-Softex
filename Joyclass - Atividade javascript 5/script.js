@@ -35,4 +35,4 @@ console.log("Saldo atual:", Banco.buscarSaldo());
 Banco.deposito(54);
 Banco.saque(84);
 console.log("Número da conta:", Banco.numeroConta());
-console.log("Saldo atual:", Banco.buscarSaldo());
+console.log("Saldo atual:", Banco.buscarSaldo()); 
